@@ -58,7 +58,7 @@ class Downtime extends DataView
      */
     public function getSearchColumns()
     {
-        return array('host_display_name', 'service_display_name');
+        return array('host_display_name', 'service_display_name', 'comment_author_name', 'comment_data');
     }
 
     /**

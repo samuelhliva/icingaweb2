@@ -18,7 +18,7 @@ class ProgramstatusQuery extends IdoQuery
             'program_version'       => 'program_version',
             'program_start_time'    => 'UNIX_TIMESTAMP(programstatus.program_start_time)',
             'program_end_time'      => 'UNIX_TIMESTAMP(programstatus.program_end_time)',
-            'is_currently_running'  => 'CASE WHEN (UNIX_TIMESTAMP(programstatus.status_update_time) + 60 > UNIX_TIMESTAMP(NOW()))
+            'is_currently_running'  => 'CASE WHEN (UNIX_TIMESTAMP(programstatus.status_update_time) + 120 > UNIX_TIMESTAMP(NOW()))
                 THEN
                     1
                 ELSE

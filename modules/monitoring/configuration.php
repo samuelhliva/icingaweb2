@@ -114,9 +114,9 @@ $this->provideSetupWizard('Icinga\Module\Monitoring\MonitoringWizard');
 /*
  * Available Search Urls
  */
-$this->provideSearchUrl($this->translate('Tactical Overview'), 'monitoring/tactical', 100);
-$this->provideSearchUrl($this->translate('Hosts'), 'monitoring/list/hosts?sort=host_severity&limit=10', 99);
-$this->provideSearchUrl($this->translate('Services'), 'monitoring/list/services?sort=service_severity&limit=10', 98);
+// $this->provideSearchUrl($this->translate('Tactical Overview'), 'monitoring/tactical', 100);
+$this->provideSearchUrl($this->translate('Hosts'), 'monitoring/list/hosts?addColumns=_host_host_monitoring_zone,_host_customer&sort=host_severity&limit=10', 99);
+$this->provideSearchUrl($this->translate('Services'), 'monitoring/list/services?addColumns=_host_customer&sort=service_severity&limit=10', 98);
 $this->provideSearchUrl($this->translate('Hostgroups'), 'monitoring/list/hostgroups?limit=10', 97);
 $this->provideSearchUrl($this->translate('Servicegroups'), 'monitoring/list/servicegroups?limit=10', 96);
 
